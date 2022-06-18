@@ -4,6 +4,27 @@
 
 {% block content %}
 
-<h1> Display Records here </h1>
+    <table class="table table-dark table-striped-columns">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Active ?</th>
+                <th>Date Selected</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person_record in object_list %}
+                <tr>
+                    <td> {{ person_record.PersonId }}</td>
+                    <td> {{ person_record.FirstName }}</td>
+                    <td> {{ person_record.LastName }}</td>
+                    <td> {{ person_record.ActiveFlag }}</td>
+                    <td> {{ person_record.DateSelected }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}
