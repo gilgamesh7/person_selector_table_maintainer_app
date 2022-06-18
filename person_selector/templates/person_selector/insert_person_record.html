@@ -4,6 +4,13 @@
 
 {% block content %}
 
-<h1> Insert Record here </h1>
+    <h1> Create new person </h1>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary"> Post </button>
+        </form>
+    </div>
 
 {% endblock %}

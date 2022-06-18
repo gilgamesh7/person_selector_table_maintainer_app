@@ -13,3 +13,16 @@ class DisplayForm(forms.ModelForm):
             'activeflag' : forms.BooleanField(),
             'dateselected' : forms.DateField(),
         }
+
+class CreateForm(forms.ModelForm):
+    class Meta:
+        model = PersonSelector
+        fields = ('firstname', 'lastname', 'activeflag')
+
+        widgets = {
+            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            # Keeping this for learning purpose - "'BooleanField' object has no attribute 'is_hidden'"
+            # This is because BooleanField is a form_fieldand not a widget
+            # 'activeflag' : forms.BooleanField(),
+        }

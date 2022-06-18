@@ -23,7 +23,8 @@ class PersonSelector(models.Model):
     def __str__(self):
         return f"{self.firstname} | {self.lastname} | {self.activeflag} | {self.dateselected}"
 
-    def get_absolute_url(self):
-        return reverse('person_selector:get_person_selector_records') 
+    # Keeping for learning purpose - this has been replaced by success_url in views.py
+    # def get_absolute_url(self):
+    #     return reverse('person_selector:get_person_selector_records') 
 
 
