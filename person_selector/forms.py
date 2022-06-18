@@ -26,3 +26,14 @@ class CreateForm(forms.ModelForm):
             # This is because BooleanField is a form_fieldand not a widget
             # 'activeflag' : forms.BooleanField(),
         }
+
+class UpdateForm(forms.ModelForm):
+    class Meta:
+        model = PersonSelector
+        fields = ('firstname', 'lastname', 'activeflag', 'dateselected')
+
+        widgets = {
+            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'dateselected': forms.DateInput(format=('%Y-%m-%d'),attrs={'class': 'form-control', 'placeholder': 'Select a date','type': 'date'}),
+        }

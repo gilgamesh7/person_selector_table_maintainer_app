@@ -1,10 +1,10 @@
 from re import L, template
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.urls import reverse_lazy
 
 from person_selector.models import PersonSelector
-from person_selector.forms import DisplayForm, CreateForm
+from person_selector.forms import DisplayForm, CreateForm, UpdateForm
 
 # Create your views here.
 class DisplayView(ListView):
@@ -21,6 +21,10 @@ class InsertView(CreateView):
 
     success_url = reverse_lazy('person_selector:get_person_selector_records')
 
+class UpdateView(UpdateView):
+    model = PersonSelector
+    form_class = UpdateForm
+    template_name = 'person_selector/update_person_record.html'   
 
-# def update_person_selector_record(request):
-#     return render(request,'person_selector/update_person_record.html')
+    success_url = reverse_lazy('person_selector:get_person_selector_records')
+
