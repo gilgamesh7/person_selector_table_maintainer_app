@@ -4,12 +4,12 @@ from person_selector.models import PersonSelector
 class DisplayForm(forms.ModelForm):
     class Meta:
         model = PersonSelector
-        fields = ('PersonId', 'FirstName', 'LastName', 'ActiveFlag', 'DateSelected')
+        fields = ('personid', 'firstname', 'lastname', 'activeflag', 'dateselected')
 
         widgets = {
-            'PersonId' : forms.IntegerField(),
-            'FirstName' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
-            'LastName' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
-            'ActiveFlag' : forms.BooleanField(),
-            'DateSelected' : forms.DateField(),
+            'personid' : forms.IntegerField(),
+            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'activeflag' : forms.BooleanField(),
+            'dateselected' : forms.DateField(),
         }

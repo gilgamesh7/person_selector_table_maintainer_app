@@ -76,10 +76,29 @@ WSGI_APPLICATION = 'maintain_db.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+from azure.keyvault.secrets import SecretClient
+from azure.identity import DefaultAzureCredential
+
+keyVaultName = "person-selector-kv"
+KVUri = "https://person-selector-kv.vault.azure.net"
+secretName = "person-selector-db-password"
+
+credential = DefaultAzureCredential()
+client = SecretClient(vault_url=KVUri, credential=credential)
+
+db_password = client.get_secret(secretName)
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'person_selector_db',
+        'HOST': 'person-selector-db-server.database.windows.net',
+        'PORT': '1433',
+        'USER': 'personselectoradmin',
+        'PASSWORD': db_password.value,
+        'OPTIONS': {
+	            'driver': 'ODBC Driver 17 for SQL Server',
+	        },
     }
 }
 

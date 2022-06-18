@@ -8,7 +8,9 @@ In Dev : []()
 # Learning Links
 [Create an app that connects to Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-python?view=azuresql) <br>
 [Create a Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-python?tabs=azure-cli) <br>
-[Connect Django to Azure SQL](https://docs.microsoft.com/en-us/samples/azure-samples/azure-sql-db-django/azure-sql-db-django/)
+[Connect Django to Azure SQL](https://docs.microsoft.com/en-us/samples/azure-samples/azure-sql-db-django/azure-sql-db-django/) <br>
+[Example code from Microsoft with SQL and REST API](https://github.com/Azure-Samples/azure-sql-db-django/tree/main/customerapi) <br>
+[Generating models.py for existing databases](https://docs.djangoproject.com/en/4.0/howto/legacy-databases/)
 
 # Command to fix pyodbc install problems on MacOS Monterey
 <br> NOTE : Check path for unixodbc by running `ls /opt/homebrew/Cellar/unixodbc/` <br>
@@ -32,6 +34,9 @@ CPPFLAGS='-I/opt/homebrew/Cellar/unixodbc/2.3.11/include' LDFLAGS='-L/opt/homebr
 # To migrate after changing models
 1. python manage.py makemigrations
 2. python manage.py migrate
+
+# To generate models.py for existing table
+python manage.py inspectdb > models.py
 
 # Run server
 python3 manage.py runserver  

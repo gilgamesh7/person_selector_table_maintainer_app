@@ -17,11 +17,11 @@
         <tbody>
             {% for person_record in object_list %}
                 <tr>
-                    <td> {{ person_record.PersonId }}</td>
-                    <td> {{ person_record.FirstName }}</td>
-                    <td> {{ person_record.LastName }}</td>
-                    <td> {{ person_record.ActiveFlag }}</td>
-                    <td> {{ person_record.DateSelected }}</td>
+                    <td> {{ person_record.personid }}</td>
+                    <td> {{ person_record.firstname }}</td>
+                    <td> {{ person_record.lastname }}</td>
+                    <td> {{ person_record.activeflag }}</td>
+                    <td> {{ person_record.dateselected }}</td>
                 </tr>
             {% endfor %}
         </tbody>
