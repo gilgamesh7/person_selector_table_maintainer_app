@@ -34,9 +34,6 @@ CPPFLAGS='-I/opt/homebrew/Cellar/unixodbc/2.3.11/include' LDFLAGS='-L/opt/homebr
 # Run server
 python3 manage.py runserver  
 
-# For sqllite db admin
-- Create super user : python3 manage.py createsuperuser
-
 # To make ready for Azure
 1. Add requirements.txt
 2. Add 'klingon-transcriber.azurewebsites.net' to ALLOWED_HOSTS
