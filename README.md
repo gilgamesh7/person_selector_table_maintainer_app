@@ -6,8 +6,9 @@ On Azure : [ ]()
 In Dev : []()
 
 # Learning Links
-[Create an app that connects to Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-python?view=azuresql)
-[Create a Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-python?tabs=azure-cli)
+[Create an app that connects to Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-python?view=azuresql) <br>
+[Create a Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-python?tabs=azure-cli) <br>
+[Connect Django to Azure SQL](https://docs.microsoft.com/en-us/samples/azure-samples/azure-sql-db-django/azure-sql-db-django/)
 
 # Command to fix pyodbc install problems on MacOS Monterey
 <br> NOTE : Check path for unixodbc by running `ls /opt/homebrew/Cellar/unixodbc/` <br>
@@ -21,6 +22,7 @@ CPPFLAGS='-I/opt/homebrew/Cellar/unixodbc/2.3.11/include' LDFLAGS='-L/opt/homebr
 - pyodbc
 - azure-identity
 - azure-keyvault-secrets
+- mssql-django
 
 # Set up for development
 1. Install & activate venv (python3 -m venv venv --upgrade-deps)
