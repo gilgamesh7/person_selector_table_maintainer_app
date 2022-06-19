@@ -1,0 +1,21 @@
+{% extends 'person_selector/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <h1> Delete Person Record </h1>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            <h3> Delete record for {{ object.firstname}} {{object.lastname}}</h3>
+            <br/>
+            <br/>
+            <strong> Are you sure ? </strong>
+            <br/>
+            <br/>
+            <button class="btn btn-primary"> Delete Record </button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 from re import L, template
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from person_selector.models import PersonSelector
@@ -28,3 +28,9 @@ class UpdateView(UpdateView):
 
     success_url = reverse_lazy('person_selector:get_person_selector_records')
 
+
+class DeleteView(DeleteView):
+    model = PersonSelector
+    template_name = 'person_selector/delete_person_record.html'   
+
+    success_url = reverse_lazy('person_selector:get_person_selector_records')
