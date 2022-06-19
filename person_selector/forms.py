@@ -20,8 +20,8 @@ class CreateForm(forms.ModelForm):
         fields = ('firstname', 'lastname', 'activeflag')
 
         widgets = {
-            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
-            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'Enter First Name'}),
+            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'Enter Last Name'}),
             # Keeping this for learning purpose - "'BooleanField' object has no attribute 'is_hidden'"
             # This is because BooleanField is a form_fieldand not a widget
             # 'activeflag' : forms.BooleanField(),
