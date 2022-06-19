@@ -33,7 +33,7 @@ class UpdateForm(forms.ModelForm):
         fields = ('firstname', 'lastname', 'activeflag', 'dateselected')
 
         widgets = {
-            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
-            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'This is a placeholder'}),
+            'firstname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'Enter First Name'}),
+            'lastname' : forms.TextInput(attrs={'class': 'form-control','placeholder':'Enter Last Name'}),
             'dateselected': forms.DateInput(format=('%Y-%m-%d'),attrs={'class': 'form-control', 'placeholder': 'Select a date','type': 'date'}),
         }
