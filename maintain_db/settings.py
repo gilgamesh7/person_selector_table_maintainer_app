@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'maintainpersonselectordb.azurewebsites.net']
 
+# For Azure CSRF to work
+CSRF_TRUSTED_ORIGINS = ['127.0.0.1', 'maintainpersonselectordb.azurewebsites.net']
+
 # Application definition
 
 INSTALLED_APPS = [
