@@ -1,9 +1,9 @@
 #  person_selector_table_maintainer_app
 
 # Link to app
-On Azure : [ ]()
+On Azure : [Person Selector DB Maintenance](https://maintainpersonselectordb.azurewebsites.net/person_selector/)
 <br/>
-In Dev : []()
+In Dev : [Person Selector DB Maintenance](http://127.0.0.1:8000/person_selector/)
 
 # Learning Links
 [Create an app that connects to Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-python?view=azuresql) <br>
