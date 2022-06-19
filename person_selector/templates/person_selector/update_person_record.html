@@ -8,8 +8,31 @@
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-primary"> Update </button>
+            <!-- {{ form.as_p }} -->
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper">
+                <br/><br/>
+                {{ form.firstname.errors }}
+                <label for="{{ form.firstname.id_for_label }}">First Name </label>
+                {{ form.firstname }}
+                <br/><br/>
+                {{ form.lastname.errors }}
+                <label for="{{ form.lastname.id_for_label }}">Last Name </label>
+                {{ form.lastname }}
+                <br/><br/>
+                {{ form.activeflag.errors }}
+                <label for="{{ form.activeflag.id_for_label }}"> Active ? </label>
+                {{ form.activeflag }}
+                <br/><br/>
+                {{ form.dateselected.errors }}
+                <label for="{{ form.dateselected.id_for_label }}"> Date Selected </label>
+                {{ form.dateselected }}
+            </div>
+            <br/><br/>
+            <div>
+                <button class="btn btn-primary"> Update </button>
+                <a href="{% url 'person_selector:get_person_selector_records' %}" class="btn btn-primary">Cancel</a>
+            </div>
         </form>
     </div>
 

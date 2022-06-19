@@ -4,7 +4,7 @@
 
 {% block content %}
 
-    <table class="table table-dark table-striped-columns">
+    <table class="table table-primary table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -12,6 +12,8 @@
                 <th>Last Name</th>
                 <th>Active ?</th>
                 <th>Date Selected</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +24,8 @@
                     <td> {{ person_record.lastname }}</td>
                     <td> {{ person_record.activeflag }}</td>
                     <td> {{ person_record.dateselected }}</td>
+                    <td> <small> <a href="{% url 'person_selector:update_person_selector_record' person_record.pk %}"> (edit) </a></small></td>
+                    <td> <small> <a href="{% url 'person_selector:delete_person_selector_record' person_record.pk %}"> (delete) </a></small></td>
                 </tr>
             {% endfor %}
         </tbody>

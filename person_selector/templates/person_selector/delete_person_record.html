@@ -8,14 +8,17 @@
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
-            <h3> Delete record for {{ object.firstname}} {{object.lastname}}</h3>
+            <h3> Delete record for {{ object.firstname}} {{ object.lastname }}</h3>
             <br/>
             <br/>
             <strong> Are you sure ? </strong>
             <br/>
             <br/>
-            <button class="btn btn-primary"> Delete Record </button>
-        </form>
+            <div>
+                <button class="btn btn-primary"> Delete Record </button>
+                <a href="{% url 'person_selector:get_person_selector_records' %}" class="btn btn-primary">Cancel</a>
+            </div>
+         </form>
     </div>
 
 {% endblock %}
