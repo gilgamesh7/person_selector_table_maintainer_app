@@ -20,6 +20,10 @@
                 <label for="{{ form.lastname.id_for_label }}">Last Name </label>
                 {{ form.lastname }}
                 <br/><br/>
+                {{ form.personcolour.errors }}
+                <label for="{{ form.personcolour.id_for_label }}"> Car Colour </label>
+                {{ form.personcolour }}
+                <br/><br/>
                 {{ form.activeflag.errors }}
                 <label for="{{ form.activeflag.id_for_label }}"> Active ? </label>
                 {{ form.activeflag }}

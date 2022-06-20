@@ -10,6 +10,7 @@
                 <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Car Colour</th>
                 <th>Active ?</th>
                 <th>Date Selected</th>
                 <th></th>
@@ -22,6 +23,7 @@
                     <td> {{ person_record.personid }}</td>
                     <td> {{ person_record.firstname }}</td>
                     <td> {{ person_record.lastname }}</td>
+                    <td> {{ person_record.personcolour }}</td>
                     <td> {{ person_record.activeflag }}</td>
                     <td> {{ person_record.dateselected }}</td>
                     <td> <small> <a href="{% url 'person_selector:update_person_selector_record' person_record.pk %}"> (edit) </a></small></td>

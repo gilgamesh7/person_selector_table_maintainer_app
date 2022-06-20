@@ -13,6 +13,7 @@ class PersonSelector(models.Model):
     personid = models.AutoField(db_column='PersonId', primary_key=True)  # Field name made lowercase.
     firstname = models.CharField(db_column='FirstName', max_length=128)  # Field name made lowercase.
     lastname = models.CharField(db_column='LastName', max_length=128)  # Field name made lowercase.
+    personcolour = models.CharField(db_column='PersonColour', max_length=128)  # Field name made lowercase.
     activeflag = models.BooleanField(db_column='ActiveFlag', blank=True, null=True)  # Field name made lowercase.
     dateselected = models.DateField(db_column='DateSelected', blank=True, null=True)  # Field name made lowercase.
 
