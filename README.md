@@ -53,3 +53,14 @@ in settings.py
 - Key Vault -> Access Policies -> Use template  "Secret management" -> Select Principal -> Search by Object ID & select -> Add -> Select Principal -> Search by Object ID & select -> Add
 - [How to Use Azure Key Vault With an Azure Web App](https://www.loginradius.com/blog/engineering/guest-post/using-azure-key-vault-with-an-azure-web-app-in-c-sharp/)
 - [Assign a Key Vault access policy](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal)
+
+# To redeploy app
+- Resource Group : person-selector-rg
+- DB Server : person-selector-db-server
+- DB : person_selector_db (person-selector-db-server/person_selector_db)
+- DB Access : Azure - SQL DB - person-selector-db-server
+- DB Table : See models.py
+- App Service : maintainpersonselectordb
+- [Github workflows](https://github.com/gilgamesh7/person_selector_table_maintainer_app/actions/workflows/main_maintainpersonselectordb.yml)
+- Recreate database
+
